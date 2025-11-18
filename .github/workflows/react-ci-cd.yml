@@ -7,7 +7,7 @@ on:
     branches: [ "**" ]
 
 env:
-  DOCKER_IMAGE_BASE: "siriya27/reux-count"
+  DOCKER_IMAGE_BASE: "siriya27/reux-count-action"  # UPDATED IMAGE NAME
   NEXUS_URL: "3.83.97.95:8081"
   NEXUS_REPO: "npm-releases"
   SONAR_HOST_URL: "http://3.83.97.95:9000"
@@ -77,4 +77,3 @@ jobs:
     # 9. Push Docker Image
     - name: Push Docker Image
       run: docker push ${{ env.DOCKER_IMAGE_BASE }}:0.0.1-${{ github.run_number }}
-
